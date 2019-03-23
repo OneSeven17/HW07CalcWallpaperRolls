@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container"> <!-- центрирует наш контент -->
+    <div class="row"> <!-- создает строку из колонок -->
+        <div class="col"> <!-- оъявляет колонку -->
+            <h1> Wallpaper calculator </h1>
+
+            <form>
+                <div class="form-group">
+                    <label for="room_length">Room length</label>
+                    <input id="room_length" class ="form-control" name="room_length" type="text" value="{{room_length}}" placeholder="Enter your room length in cm: " required>
+                </div>
+                <div class="form-group">
+                    <label for="room_width">Room width</label>
+                    <input id="room_width" class ="form-control" name="room_width" type="text" value="{{room_width}}" placeholder="Enter your room width in cm: " required>
+                </div>
+                <div class="form-group">
+                    <label for="room_height">Room height</label>
+                    <input id="room_height" class ="form-control" name="room_height" type="text" value="{{room_height}}" placeholder="Enter your room height in cm: " required>
+                </div>
+                <div class="form-group">
+                    <label for="roll_width">Roll width</label>
+                    <input id="roll_width" class ="form-control" name="roll_width" type="text" value="{{roll_width}}" placeholder="Enter roll width in cm: " required>
+                </div>
+                <div class="form-group">
+                    <label for="roll_length">Roll length</label>
+                    <input id="roll_length" class ="form-control" name="roll_length" type="text" value="{{roll_length}}" placeholder="Enter roll length in cm: " required>
+                </div>
+                <button class="btn btn-primary">Calculate</button>
+            </form>
+            {% if roll_quantity %}
+            <div class="alert alert-{{level}}"> Roll quantity: {{roll_quantity}}</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
